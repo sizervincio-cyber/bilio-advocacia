@@ -190,7 +190,7 @@ section{ padding-block: clamp(72px, 9vw, 144px); position:relative; }
 }
 .hero-bg{
   position:absolute; inset:0; z-index:-2;
-  background-image: url('assets/hero-justica.png');
+  background-image: url('assets/hero-justica.webp');
   background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;
@@ -1342,7 +1342,7 @@ section{ padding-block: clamp(72px, 9vw, 144px); position:relative; }
 <header class="header over-dark" id="site-header" data-screen-label="Header">
   <div class="wrap">
     <a class="brand-mark" href="#top" aria-label="Bílio &amp; Bílio Advocacia e Tribunais — Página inicial">
-      <img src="assets/logo-bilio.png" alt="Bílio &amp; Bílio Advocacia e Tribunais" class="brand-logo" width="200" height="60">
+      <img src="assets/logo-bilio.svg" alt="Bílio &amp; Bílio Advocacia e Tribunais" class="brand-logo" width="200" height="60">
     </a>
     <nav class="nav" aria-label="Navegação principal">
       <ul class="nav-list">
@@ -1582,7 +1582,7 @@ section{ padding-block: clamp(72px, 9vw, 144px); position:relative; }
 
     <div class="about-body">
       <figure class="about-media reveal">
-        <img src="assets/edificio-euro.png" alt="Edifício Euro Working Concept — sede do escritório no Setor Oeste de Goiânia" loading="lazy" width="600" height="800">
+        <img src="assets/edificio-euro.webp" alt="Edifício Euro Working Concept — sede do escritório no Setor Oeste de Goiânia" loading="lazy" width="600" height="800">
         <div class="meta">Sede · Edifício Euro Working Concept · Setor Oeste</div>
       </figure>
       <div class="about-text reveal delay-1">
@@ -1764,7 +1764,7 @@ section{ padding-block: clamp(72px, 9vw, 144px); position:relative; }
 <footer class="footer" data-screen-label="Footer">
   <div class="wrap">
     <div>
-      <div class="brand-foot"><img src="assets/logo-bilio.png" alt="Bílio &amp; Bílio Advocacia e Tribunais"></div>
+      <div class="brand-foot"><img src="assets/logo-bilio.svg" alt="Bílio &amp; Bílio Advocacia e Tribunais"></div>
       <p style="font-family:'IBM Plex Mono',monospace; font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; margin:0 0 var(--s-3);">Advocacia e Tribunais · Goiânia / GO</p>
       <p style="font-size:.92rem; line-height:1.6; max-width:42ch; color:rgba(244,239,230,.6);">Escritório de advocacia com atuação consultiva, judicial e administrativa. Sede em Goiânia, com rede de correspondentes em diferentes Estados do país.</p>
     </div>
@@ -1844,27 +1844,27 @@ mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMo
 
 // ===== EQUIPE — dados + marquee R→L + ficha =====
 const TEAM = [
-  { id:'luciano',   nome:'Luciano da Silva Bílio',         role:'Sócio · Processo Civil · Tributário',     photo:'assets/team-luciano.png',   badge:'Sócio fundador',
+  { id:'luciano',   nome:'Luciano da Silva Bílio',         role:'Sócio · Processo Civil · Tributário',     photo:'assets/team-luciano.webp',   badge:'Sócio fundador',
     short:'Contencioso judicial, demandas empresariais e saúde suplementar.',
     bio:'Atuação concentrada em contencioso judicial estratégico, demandas empresariais e direito da saúde suplementar. Conduz casos com ênfase em análise técnica, organização processual e foco em resultados consistentes.',
     tags:['Processo Civil','Tributário','Planos de Saúde','Contencioso Empresarial'] },
-  { id:'fabiano',   nome:'Fabiano da Silva Bílio',         role:'Sócio · Trabalhista · Resp. Civil',       photo:'assets/team-fabiano.png',   badge:'Sócio',
+  { id:'fabiano',   nome:'Fabiano da Silva Bílio',         role:'Sócio · Trabalhista · Resp. Civil',       photo:'assets/team-fabiano.webp',   badge:'Sócio',
     short:'Defesa, cobrança, negociação e contencioso estratégico.',
     bio:'Atuação em defesa trabalhista, responsabilidade civil e recuperação de créditos. Experiência em negociação, contencioso estratégico e prevenção de passivos em contextos empresariais.',
     tags:['Trabalhista','Responsabilidade Civil','Recuperação de Créditos'] },
-  { id:'cristiane', nome:'Cristiane da Silva Bílio',        role:'Sócia · Família · Proteção Patrimonial', photo:'assets/team-cristiane.png', badge:'Sócia',
+  { id:'cristiane', nome:'Cristiane da Silva Bílio',        role:'Sócia · Família · Proteção Patrimonial', photo:'assets/team-cristiane.webp', badge:'Sócia',
     short:'Conflitos familiares e proteção de interesses patrimoniais.',
     bio:'Atuação em direito de família, sucessões, divórcio e proteção patrimonial. Conduz casos com sensibilidade, sigilo e técnica jurídica voltada à preservação dos interesses do cliente.',
     tags:['Família','Sucessões','Divórcio','Proteção Patrimonial','Responsabilidade Civil'] },
-  { id:'fabianne',  nome:'Fabianne Silveira de Lima Bílio', role:'Advogada · Consumidor · Trabalhista',    photo:'assets/team-fabianne.png',  badge:'Advogada associada',
+  { id:'fabianne',  nome:'Fabianne Silveira de Lima Bílio', role:'Advogada · Consumidor · Trabalhista',    photo:'assets/team-fabianne.webp',  badge:'Advogada associada',
     short:'Demandas cíveis, relações de consumo e conflitos trabalhistas.',
     bio:'Atuação em direito do consumidor e demandas trabalhistas, com foco em análise técnica de contratos, relações de consumo e condução de conflitos individuais e coletivos.',
     tags:['Consumidor','Trabalhista','Cível'] },
-  { id:'thais',     nome:'Thaís Rodrigues de Oliveira Bílio', role:'Advogada · Processo Civil · Seguros',  photo:'assets/team-thais.png',     badge:'Advogada associada',
+  { id:'thais',     nome:'Thaís Rodrigues de Oliveira Bílio', role:'Advogada · Processo Civil · Seguros',  photo:'assets/team-thais.webp',     badge:'Advogada associada',
     short:'Análise contratual, seguros e demandas cíveis.',
     bio:'Atuação em processo civil e contratos de seguro. Análise técnica de apólices, sinistros e demandas correlatas, com foco em segurança jurídica e clareza contratual.',
     tags:['Processo Civil','Contratos de Seguro'] },
-  { id:'cleudomar', nome:'Cleudomar Ribeiro de Oliveira',   role:'Advogado · Direito do Trabalho',         photo:'assets/team-cleudomar.png', badge:'Advogado associado',
+  { id:'cleudomar', nome:'Cleudomar Ribeiro de Oliveira',   role:'Advogado · Direito do Trabalho',         photo:'assets/team-cleudomar.webp', badge:'Advogado associado',
     short:'Demandas trabalhistas, orientação e contencioso.',
     bio:'Atuação dedicada ao direito do trabalho, com experiência em condução de demandas individuais, orientação preventiva e contencioso trabalhista em diferentes setores.',
     tags:['Trabalhista'] }
