@@ -25,6 +25,8 @@ CSS = f"""
 @font-face{{font-family:'Inter';src:url(fonts/inter-latin-400-normal.woff2) format('woff2');font-weight:400;font-style:normal}}
 @font-face{{font-family:'Inter';src:url(fonts/inter-latin-500-normal.woff2) format('woff2');font-weight:500;font-style:normal}}
 @font-face{{font-family:'Inter';src:url(fonts/inter-latin-600-normal.woff2) format('woff2');font-weight:600;font-style:normal}}
+@font-face{{font-family:'Inter';src:url(fonts/inter-greek-400-normal.woff2) format('woff2');font-weight:400;unicode-range:U+0370-03FF}}
+@font-face{{font-family:'Inter';src:url(fonts/inter-greek-500-normal.woff2) format('woff2');font-weight:500;unicode-range:U+0370-03FF}}
 @page{{size:1920px 1080px;margin:0}}
 *{{box-sizing:border-box;margin:0;padding:0}}
 html,body{{width:1920px;height:1080px;overflow:hidden}}
@@ -67,7 +69,7 @@ eyeL = (fx(.278), fy(.26)); eyeR = (fx(.768), fy(.26)); tip = (fx(.50), fy(1.0))
 diagram = f"""
 <svg class="abs" style="left:880px;top:100px" width="960" height="880" viewBox="0 0 960 880" xmlns="http://www.w3.org/2000/svg">
   <g transform="translate({ox},{oy})">
-    <svg width="{sw}" height="{sh:.1f}" viewBox="{VB}"><path fill="{BORDO}" d="{BAR_D}"/><path fill="{GOLD}" d="{BODY_D}"/></svg>
+    <svg width="{sw}" height="{sh:.1f}" viewBox="{VB}"><path fill="{CREME}" d="{BAR_D}"/><path fill="{GOLD}" d="{BODY_D}"/></svg>
   </g>
   <!-- eixo -->
   <line x1="{fx(.5):.1f}" y1="{oy-52}" x2="{fx(.5):.1f}" y2="{oy+sh+20:.1f}" stroke="{CREME}" stroke-opacity=".55" stroke-width="1.2" stroke-dasharray="5 6"/>
@@ -77,6 +79,7 @@ diagram = f"""
   <circle cx="{eyeL[0]:.1f}" cy="{eyeL[1]:.1f}" r="6" fill="{CREME}" stroke="{PRETO}" stroke-width="2"/>
   <circle cx="{eyeR[0]:.1f}" cy="{eyeR[1]:.1f}" r="6" fill="{CREME}" stroke="{PRETO}" stroke-width="2"/>
   <polyline points="{eyeL[0]:.1f},{eyeL[1]:.1f} {eyeL[0]:.1f},{oy-95} 60,{oy-95}" fill="none" stroke="{CREME}" stroke-opacity=".7" stroke-width="1.2"/>
+  <polyline points="{eyeR[0]:.1f},{eyeR[1]:.1f} {eyeR[0]:.1f},{oy-95} {eyeL[0]:.1f},{oy-95}" fill="none" stroke="{CREME}" stroke-opacity=".7" stroke-width="1.2"/>
   <text x="60" y="{oy-112}" fill="{GOLD}" font-family="Montserrat" font-weight="600" font-size="12" letter-spacing="2.2">CONTRAFORMAS SUPERIORES</text>
   <text x="60" y="{oy-72}" fill="{MARFIM}" fill-opacity=".8" font-family="Inter" font-size="17">Lembram o olhar.</text>
   <!-- focinho -->
@@ -111,8 +114,8 @@ body = f"""
 <h1 class="abs" style="left:120px;top:200px;width:800px">O tigre fica<br>fora do símbolo.</h1>
 <p class="b abs" style="left:120px;top:400px;width:690px">O animal pode aparecer na comunicação do escritório como imagem de apoio. Nunca como parte da marca.</p>
 <div class="abs" style="left:120px;top:640px;display:flex;align-items:flex-end;gap:34px">
-  {symbol(BORDO, GOLD, height=250)}
-  <p style="font-family:Inter;font-size:15px;line-height:23px;color:rgba(244,240,232,.62);width:330px;padding-bottom:4px">Símbolo oficial, em cores chapadas. As áreas vazadas ficam sempre em fundo sólido.</p>
+  {symbol(CREME, GOLD, height=250)}
+  <p style="font-family:Inter;font-size:15px;line-height:23px;color:rgba(244,240,232,.62);width:330px;padding-bottom:4px">Versão negativa oficial, em cores chapadas. As áreas vazadas ficam sempre em fundo sólido.</p>
 </div>
 <div class="abs" style="left:1060px;top:196px;width:740px">{rows}<div style="border-top:1px solid rgba(244,240,232,.16)"></div></div>
 """
@@ -121,7 +124,7 @@ out["p10_tigre_regras"] = page("dark", "07", "O tigre", body, "10", "Manual · 0
 # ---------------------------------------------------------------- P11 (B2) coração, sem halo
 hsz = 820
 body = f"""
-<div class="abs" style="left:110px;top:130px">{symbol(BORDO, GOLD, height=hsz)}</div>
+<div class="abs" style="left:110px;top:130px">{symbol(CREME, GOLD, height=hsz)}</div>
 <h1 class="abs" style="left:1027px;top:231px;width:760px">No contorno,<br>um coração.</h1>
 <p class="b abs" style="left:1027px;top:422px;width:700px">A base do símbolo se fecha em duas curvas que convergem para um vértice. O desenho protege como um escudo e, ao mesmo tempo, lembra um coração.</p>
 <p class="b abs" style="left:1027px;top:555px;width:700px">É o lugar das pessoas na marca. Por trás de cada processo há uma vida, uma família ou um projeto. A técnica existe para servir a isso.</p>
@@ -210,9 +213,9 @@ def person(x, img, nome, kick, areas):
 body = f"""
 <h1 class="abs" style="left:120px;top:200px;width:620px">Quem<br>assina.</h1>
 <p class="b abs" style="left:120px;top:370px;width:580px">Luciano da Silva Bílio e Fabiano da Silva Bílio, sócios do escritório.</p>
-<div class="abs" style="left:120px;top:800px;width:580px;border-top:1px solid rgba(244,240,232,.16);padding-top:18px">
-<span class="k" style="color:{GOLD}">Pendente</span>
-<p style="margin-top:12px;font-size:15px;line-height:23px;color:rgba(244,240,232,.62)">Retratos dos arquivos do site, sem edição. Origem, autorização de uso e títulos a confirmar com os sócios antes de qualquer reprodução.</p></div>
+<div class="abs" style="left:120px;top:770px;width:600px;border-top:1px solid rgba(196,164,111,.5);padding-top:18px">
+<span class="k" style="color:{GOLD};font-size:16px">Pendente</span>
+<p style="margin-top:12px;font-size:19px;line-height:29px;color:rgba(244,240,232,.9)">Retratos dos arquivos do site, sem edição. Origem, autorização de uso e títulos a confirmar com os sócios antes de qualquer reprodução.</p></div>
 {person(824,"luciano.jpg","Luciano da Silva Bílio","Sócio fundador","Processo Civil · Tributário")}
 {person(1324,"fabiano.jpg","Fabiano da Silva Bílio","Sócio","Trabalhista · Responsabilidade Civil")}
 """

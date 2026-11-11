@@ -11,42 +11,71 @@ Edição cirúrgica sobre o PDF original. Nas páginas corrigidas por texto, o t
 
 | Páginas | Situação | O que mudou |
 |---|---|---|
-| 1, 3, 5, 6, 7, 14, 15, 16, 22 a 26, 28 | Original, idênticas | Nada |
+| 5, 6, 7, 14, 15, 16, 22, 24, 26 | Original, idênticas (verificado pixel a pixel) | Nada |
+| 1 | Corrigida | Fundo raster com degradê e reflexo removido (cover flat); "VERSÃO 1.1 · 2026" |
 | 2 | Corrigida | Sumário com números de página e dois anexos (21 e 22) |
-| 4 | Corrigida | Quebra de linha com hífen eliminada na coluna "Reconhecimento" |
-| 8 | Corrigida | Rótulo "B" passa a "B contraposto"; nota: destaques didáticos, não são variantes |
-| 9, 10 | Refeitas (B1) | Tigre fora do símbolo: diagrama sobre o símbolo oficial e quatro regras de uso do animal |
-| 11 | Refeita (B2) | Símbolo em dourado chapado, inteiro, sem halo |
-| 12 | Refeita | CMYK do creme preenchido; rótulo "CMYK*" com nota de referência |
-| 13 | Refeita | Regra 3:1 corrigida; blocos de rodapé atualizados |
-| 17 | Corrigida | Versão contorno: fio medido (cerca de 0,3% da altura) e tamanhos mínimos derivados (28 mm ou 320 px) |
-| 18, 19 | Corrigidas | Relações φ descritas só onde foram medidas; "largura do símbolo" passa a "largura da barra superior" |
-| 20 | Corrigida | Mínimos impressos marcados como "(proposto)"; nota deixa de dizer "proporcionais" |
-| 21 | Corrigida | Nota com três erros adicionais (recompor o nome em outra fonte, alterar a proporção, usar a marca anterior junto) |
-| 27 | Corrigida | Arial como reserva no e-mail; regra de testar o favicon em 16 e 32 px reais |
-| 29 | Refeita (manifesto) | Texto novo ancorado na transição real; fundo grafite (o fundo vermelho com textura foi eliminado) |
-| 30 | Corrigida | Fecho novo: "O desenho ficou mais preciso. O nome e as iniciais continuam."; espaço antes do ponto final do lema removido |
-| 31 (nova) | B9 | Quem assina: Luciano e Fabiano, retratos do site sem edição, marcada como pendente |
-| 32 (nova) | Produção | Especificação proposta da papelaria: formatos ISO e correntes, sangria 3 mm; papel e acabamento "a definir" |
+| 3 | Corrigida | "Dois B contrapostos" do símbolo antigo passa a "Dois B espelhados, lado a lado" |
+| 4 | Corrigida | Hífen final eliminado; texto sem "contrapostos" (o termo fica só para a marca nova) |
+| 8 | Corrigida | Rótulo "B" vira "B contraposto"; nota: destaques didáticos, não são variantes |
+| 9, 10 | Refeitas (B1) | Tigre fora do símbolo: diagrama sobre o símbolo oficial (versão negativa, traço creme) e quatro regras de uso do animal |
+| 11 | Refeita (B2) | Símbolo em versão negativa, dourado chapado, inteiro, sem halo |
+| 12, 13 | Refeitas | CMYK do creme preenchido, rótulo "CMYK*"; regra 3:1 corrigida; blocos de rodapé atualizados |
+| 17 | Corrigida | Versão contorno: fio medido e mínimos derivados; "fundo creme" corrigido para "fundo marfim" |
+| 18, 19 | Corrigidas | Relações φ descritas só onde foram medidas; "barra superior"; ressalva explícita sobre a reduzida horizontal; φ agora em fonte sem serifa (Inter) |
+| 20 | Corrigida | Mínimos impressos marcados "(proposto)"; nota sobre a margem incluída nas larguras; "proporcionais" removido |
+| 21 | Corrigida | Erros adicionais, exceção do comparativo histórico, aviso de origem da foto do tigre |
+| 23 | Corrigida | Nota: telefone, e-mail e endereço seguem o site do escritório e devem ser confirmados |
+| 25 | Corrigida | Fundo raster com degradê e reflexo removido; símbolo-fantasma chapado, tom sobre tom |
+| 27 | Corrigida | Arial como reserva no e-mail; teste do favicon em 16 e 32 px |
+| 28 | Nota | "Imagens ilustrativas, origem a documentar. Substituição prevista." (fotos continuam, pendentes) |
+| 29 | Refeita (manifesto) | Texto novo; fundo grafite; símbolo branco oficial; filete dourado |
+| 30 | Corrigida | Fecho novo; espaço antes do ponto do lema removido |
+| 31 (nova) | B9 | Quem assina: retratos do site sem edição, pendência em destaque |
+| 32 (nova) | Produção | Especificação proposta da papelaria |
 
 ## 3. Verificações executadas
 
 | Teste | Resultado |
 |---|---|
 | Páginas e formato | 32 páginas, todas 1440 × 810 pt |
-| Páginas só do original | 20 de 20 idênticas ao original, pixel a pixel (66 ppi) |
-| Páginas alteradas por texto | Exatamente as 11 previstas (2, 4, 8, 17, 18, 19, 20, 21, 27, 29, 30) |
-| Texto antigo removido | Busca por 8 trechos antigos: nenhum encontrado nas páginas editadas |
-| Fontes | 41 embutidas, todas CID TrueType, nenhuma Type 3 |
-| Seleção de texto | Funciona nas páginas novas; acentos preservados |
-| Cor do símbolo nas páginas refeitas | Amostra: #C4A46F uniforme (sem degradê, sem halo) |
+| Páginas só do original | 9 de 9 idênticas ao original |
+| Texto antigo removido | Busca de trechos antigos nas páginas editadas: nenhum restante |
+| Fontes | Todas embutidas, CID TrueType, nenhuma Type 3, nenhuma fonte serifada de reserva |
+| Seleção de texto | Funciona nas páginas novas e nas editadas |
+| Cor do símbolo nas páginas refeitas | Amostra #C4A46F uniforme (sem degradê, sem halo) |
+| Bordô sobre fundo escuro | Removido das páginas 9, 10 e 11 (usam a versão negativa, traço creme) |
 | Contraste dos novos rodapés | 4,96:1 (escuro) e 5,03:1 (claro) |
-| Favicon em pixels reais | `comparacao/favicon_teste_pixels_reais.png`: em 16 px sobram a silhueta e a barra superior; os detalhes internos se fundem. Em 24 px ainda é parcial. Em 32 px lê bem. Confirma o limite da p. 20 ("16 a 24 px, só como favicon"). |
-| Contradições do diagnóstico | Resolvidas: p. 10 e 11 (símbolo), p. 13 (3:1), p. 18 e 19 (φ), p. 20 ("proporcionais") |
+| Favicon em pixels reais | `comparacao/favicon_teste_pixels_reais.png`: em 16 px sobram a silhueta e a barra; em 24 px é parcial; em 32 px lê bem |
 
 ## 4. Auditoria independente
 
-Um revisor sem acesso à minha análise examinou o PDF final. O resultado e o tratamento de cada apontamento estão na seção 6.
+Um revisor sem acesso à minha análise examinou o PDF (versão anterior a estas correções) e deu **7/10** em acabamento editorial. Tratamento de cada apontamento:
+
+| Apontamento | Gravidade | Tratamento |
+|---|---|---|
+| Bordô sobre preto nas p. 9 a 11 (viola a p. 13) | Alta | **Corrigido**: versão negativa, traço creme |
+| Degradê e reflexo no fundo da p. 25 (e da capa) | Alta | **Corrigido**: imagens removidas; p. 25 com símbolo chapado tom sobre tom |
+| Dados de contato sem marcador (p. 23, 27) | Alta | **Esclarecido**: coincidem com os dados do site do escritório (não são fictícios). Nota na p. 23 diz isso e pede confirmação. Nada foi trocado por colchetes sem decisão do cliente |
+| "Contrapostos" serve à marca antiga e à nova (p. 3, 4, 6) | Média | **Corrigido** |
+| Pendências abertas em "versão 1.0" | Média | **Corrigido**: versão 1.1; ressalva na p. 19. Pendências listadas na seção 6 |
+| Pendência da p. 31 pouco visível | Média | **Corrigido** |
+| Foto do tigre sem crédito (p. 21, 28) | Média | **Sinalizado** nas duas páginas; resolução depende da origem |
+| Amostras da p. 20 não batem com "tamanho real" | Média | **Esclarecido**: as larguras incluem a margem dos arquivos oficiais (nota nova) |
+| p. 22: painel raster, régua do cabeçalho sobre a imagem, texto ilegível | Média | **Pendente**: exige novo mockup fotográfico (ver 04_direcao) |
+| p. 28: cabeçalho e rodapé sobre fotos, baixa resolução | Média | **Pendente**: as fotos serão substituídas (ver 04_direcao) |
+| φ em fonte serifada (p. 18, 19) | Baixa | **Corrigido** (Inter, glifo grego) |
+| p. 5: ANTES e AGORA desalinhados, logo antigo em raster | Baixa | **Mantido**: preserva o arquivo original do escritório; alinhar exige novo layout |
+| p. 29, 30: Montserrat no texto, símbolo creme, filete fraco | Baixa | **Corrigido** o símbolo (branco oficial) e o filete (dourado). Montserrat mantida: é texto de display, não texto corrente |
+| p. 17, 21: legenda apertada, "creme" vs "marfim" | Baixa | **Corrigido** o nome da cor; legenda mantida com nota curta |
+| p. 16, 17: descrições em rosa claro, fundo branco puro | Baixa | **Mantido** (páginas originais); registrado |
+| Texto de 7 a 8,5 pt (p. 12, 13, 19, 27) | Baixa | **Mantido** nas originais; registrado |
+| Régua do cabeçalho sobre faixas (p. 12, 14); tons rosados fora da paleta (p. 8) | Baixa | **Mantido**; registrado |
+| p. 21 proíbe a marca antiga ao lado da nova | Baixa | **Corrigido**: exceção para comparativo histórico |
+| p. 9: segundo olho sem chamada | Baixa | **Corrigido** |
+| p. 32: título apertado contra a tabela | Baixa | **Corrigido** |
+| Grid e ritmo vertical entre páginas vizinhas | Baixa | **Mantido** |
+
+Depois destas correções não houve nova rodada de auditoria independente. A nota 7/10 refere-se à versão anterior.
 
 ## 5. Avisos
 
@@ -57,6 +86,7 @@ Um revisor sem acesso à minha análise examinou o PDF final. O resultado e o tr
 5. Especificação da p. 32: formatos ISO e correntes; margem e sangria são proposta usual. Nada de papel ou acabamento foi inventado.
 6. A relação C1 e altura do símbolo na versão reduzida horizontal (p. 19) **não foi medida** e a página agora diz isso.
 7. Os rodapés das páginas originais continuam com o contraste do original (cerca de 4,1:1). Só as páginas refeitas têm o rodapé mais escuro.
+9. A capa e a p. 25 perderam o fundo em imagem (degradê e reflexo). A capa ficou chapada, sem o símbolo-fantasma; se o escritório quiser o fantasma de volta, ele precisa ser refeito em vetor chapado.
 8. Versão 9:16 não foi atualizada.
 
 ## 6. Pendências que dependem do cliente

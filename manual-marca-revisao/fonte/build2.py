@@ -39,9 +39,8 @@ for k, (num, name, pg) in enumerate([("21","Quem assina","31"),("22","Produção
 out["ov_p02"] = ov(items, "p02")
 
 # ---------------------------------------------------------------- p. 4: coluna I sem hífen final
-items = [T(120, 860, "Preservar os dois B contrapostos e o nome por", 20, MARFIM, h=24),
-         T(120, 891, "extenso. Quem conhecia a marca precisa", 20, MARFIM, h=24),
-         T(120, 922, "reencontrá-la.", 20, MARFIM, h=24)]
+items = [T(120, 860, "Preservar os dois B e o nome por extenso.", 20, MARFIM, h=24),
+         T(120, 891, "Quem conhecia a marca precisa reencontrá-la.", 20, MARFIM, h=24)]
 out["ov_p04"] = ov(items, "p04")
 
 # ---------------------------------------------------------------- p. 8: rótulo e nota didática
@@ -62,8 +61,9 @@ items = [T(1280, 166 + 31 * i, t, 20, "#5E5A52", h=24) for i, t in enumerate([
 out["ov_p18"] = ov(items, "p18")
 items = [T(1367, 475, "A largura do nome é a largura da barra", 20, MARFIM, h=24),
          T(1367, 506, "superior do símbolo multiplicada por φ.", 20, MARFIM, h=24),
-         T(663, 730, "Na reduzida horizontal, sem descritor, a proporção entre C1 e a altura do símbolo", 16, MARFIM, h=19),
-         T(663, 754, "será confirmada no arquivo-mestre. A área de proteção continua sendo X = C1.", 16, MARFIM, h=19)]
+         T(663, 730, "Ressalva: na reduzida horizontal, sem descritor, a proporção entre C1 e a", 16, MARFIM, h=19),
+         T(663, 754, "altura do símbolo será confirmada no arquivo-mestre. A área de proteção", 16, MARFIM, h=19),
+         T(663, 778, "continua sendo X = C1.", 16, MARFIM, h=19)]
 out["ov_p19"] = ov(items, "p19")
 
 # ---------------------------------------------------------------- p. 20: mínimos impressos propostos
@@ -73,11 +73,13 @@ items = [T(120, 788, "Impresso: 40 mm de largura (proposto).", 17.5, G, h=21),
          T(1077, 788, "Sem descritor.", 17.5, G, h=21),
          T(1077, 815, "Impresso: 25 mm (proposto).", 17.5, G, h=21),
          T(1450, 815, "Impresso: 8 mm de altura (proposto).", 17.5, G, h=21),
+         T(1160, 303, "As larguras incluem a margem mínima dos arquivos oficiais.", 20, G, h=24),
          T(120, 958, "Os mínimos em pixel valem para tela. Os mínimos impressos, em milímetros, são propostos e independentes dos pixels: confirmar em prova de gráfica.", 16, G, h=20)]
 out["ov_p20"] = ov(items, "p20")
 
 # ---------------------------------------------------------------- p. 21: erros adicionais
-items = [T(120, 974, "Também evitar: recompor o nome com outra fonte, alterar a proporção entre símbolo e nome e usar a marca anterior ao lado da nova.", 15, G, h=20)]
+items = [T(120, 968, "Também evitar: recompor o nome com outra fonte, alterar a proporção entre símbolo e nome e usar a marca anterior ao lado da nova (exceto em comparativo histórico, como na página 5).", 14.5, G, h=19),
+         T(120, 987, "A foto do tigre neste quadro é ilustrativa: origem a documentar (ver página 10).", 14.5, G, h=19)]
 out["ov_p21"] = ov(items, "p21")
 
 # ---------------------------------------------------------------- p. 27: reserva de fonte e teste do favicon
@@ -87,6 +89,19 @@ items = [T(120, 806, "Símbolo à esquerda, nome em Montserrat, dados em Inter."
          T(120, 899, "fora da paleta.", 20, G, h=24),
          T(1000, 948, "Antes de publicar, testar o favicon em 16 e 32 px reais.", 20, G, h=24)]
 out["ov_p27"] = ov(items, "p27")
+
+# ---------------------------------------------------------------- p. 1: versão
+out["ov_p01"] = ov(['<div class="t m" style="left:1400px;top:1013px;width:397px;text-align:right;font-size:12.5px;letter-spacing:.18em;line-height:15px;color:#F4F0E8;text-transform:uppercase">VERSÃO 1.1 · 2026</div>'], "p01")
+# ---------------------------------------------------------------- p. 3: vocabulário
+out["ov_p03"] = ov([T(500, 738, "Dois B espelhados, lado a lado", 20, GRAF, h=24, extra="width:280px;text-align:right")], "p03")
+# ---------------------------------------------------------------- p. 17: nome da cor
+out["ov_p17b"] = ov([T(245, 501, "fundo marfim", 14, BORDO, h=17)], "p17b")
+# ---------------------------------------------------------------- p. 23: origem dos dados
+out["ov_p23"] = ov([T(120, 938, "Campos entre colchetes nos modelos são marcadores a preencher com os dados confirmados de cada profissional. Telefone, e-mail e endereço seguem o site do escritório e também devem ser confirmados.", 16, G, h=20)], "p23")
+# ---------------------------------------------------------------- p. 25: símbolo-fantasma chapado (tom sobre tom)
+out["ov_p25"] = ov([f'<div class="abs" style="left:100px;top:150px;opacity:.07">{symbol(MARFIM, MARFIM, height=840)}</div>'], "p25")
+# ---------------------------------------------------------------- p. 28: origem das imagens
+out["ov_p28"] = ov([T(1178, 900, "Imagens ilustrativas, origem a documentar. Substituição prevista.", 15, "rgba(244,240,232,.7)", h=19)], "p28")
 
 # ---------------------------------------------------------------- p. 30: fecho ancorado na transição real
 items = ['<div class="t m" style="left:0;top:264px;width:1920px;text-align:center;font-size:16.5px;letter-spacing:.24em;line-height:22px;color:#C4A46F">A FORÇA DA CONVICÇÃO. O EQUILÍBRIO DA JUSTIÇA.</div>',
@@ -100,8 +115,8 @@ paras = ["Antes, dois B lado a lado. Agora, dois B contrapostos sobre uma só ha
          "O que mudou foi a precisão: um desenho que cabe em um carimbo e em um favicon."]
 ptxt = "".join(f'<p style="font-family:Montserrat;font-weight:500;font-size:37px;line-height:52px;color:{CREME};margin-bottom:38px">{t}</p>' for t in paras)
 body = f"""
-<div class="abs" style="left:200px;top:330px">{symbol(CREME, CREME, height=380)}</div>
-<div class="abs" style="left:780px;top:322px;width:1px;height:430px;background:{BORDO}"></div>
+<div class="abs" style="left:200px;top:330px">{symbol("#FFFFFF", "#FFFFFF", height=380)}</div>
+<div class="abs" style="left:780px;top:322px;width:1px;height:430px;background:{GOLD}"></div>
 <div class="abs" style="left:846px;top:310px;width:900px">{ptxt}</div>
 """
 p29 = page("dark", "20", "Manifesto final", body, "29", "Manual · 20 Manifesto final")
@@ -127,9 +142,9 @@ trs = "".join("<tr>" + "".join(cell(v, i == 0) for i, v in enumerate(r)) + "</tr
 body = f"""
 <h1 class="abs" style="left:120px;top:145px;width:1000px">Papelaria: o que a gráfica precisa saber.</h1>
 <p class="abs" style="left:1260px;top:158px;width:540px;font-family:Inter;font-size:19px;line-height:30px;color:#5E5A52">Proposta de especificação. Formatos conforme normas e usos correntes. Tudo o que está “a definir” depende da gráfica escolhida e de prova de cor.</p>
-<table class="abs" style="left:120px;top:320px;width:1680px;border-collapse:collapse"><thead><tr>{th}</tr></thead><tbody>{trs}</tbody>
+<table class="abs" style="left:120px;top:352px;width:1680px;border-collapse:collapse"><thead><tr>{th}</tr></thead><tbody>{trs}</tbody>
 <tfoot><tr><td colspan="6" style="border-top:1px solid rgba(32,36,42,.16)"></td></tr></tfoot></table>
-<div class="abs" style="left:120px;top:760px;width:1680px;display:flex;gap:70px">
+<div class="abs" style="left:120px;top:800px;width:1680px;display:flex;gap:70px">
  <div style="width:520px"><div class="k" style="color:{BORDO};font-size:13px">Cor</div><p style="margin-top:10px;font-family:Inter;font-size:17px;line-height:27px;color:#5E5A52">Valores oficiais nas páginas 12 e 13. CMYK é referência calculada do RGB. Prova de cor obrigatória antes da tiragem.</p></div>
  <div style="width:520px"><div class="k" style="color:{BORDO};font-size:13px">Dourado</div><p style="margin-top:10px;font-family:Inter;font-size:17px;line-height:27px;color:#5E5A52">Tinta especial ou hot stamping fosco, com especificação acertada com a gráfica. Nenhum Pantone foi adotado.</p></div>
  <div style="width:520px"><div class="k" style="color:{BORDO};font-size:13px">Dados de contato</div><p style="margin-top:10px;font-family:Inter;font-size:17px;line-height:27px;color:#5E5A52">Só dados confirmados pelo profissional. Campos entre colchetes nos modelos são marcadores.</p></div>
