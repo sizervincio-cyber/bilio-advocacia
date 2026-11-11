@@ -3,7 +3,7 @@
 import warnings; warnings.filterwarnings("ignore")
 import pymupdf, sys
 import os; B = os.path.dirname(os.path.abspath(__file__))
-SRC, DST = f"{B}/BILIO_Manual_Marca_16x9_rev1.pdf", f"{B}/BILIO_Manual_Marca_16x9_rev2.pdf"
+SRC, DST = f"{B}/BILIO_Manual_Marca_16x9_rev1.pdf", f"{B}/BILIO_Manual_Marca_16x9_v1.1.pdf"
 doc = pymupdf.open(SRC)
 K = 0.75  # px (1920) -> pt (1440)
 REDACT = {  # página (1-based): retângulos em px

@@ -1,6 +1,6 @@
 # BÍLIO & BÍLIO · Relatório final de QA (rodadas 1 e 2)
 
-Entregável: `BILIO_Manual_Marca_16x9_rev2.pdf` · 32 páginas · 16:9 (1440 × 810 pt).
+Entregável: `BILIO_Manual_Marca_16x9_v1.1.pdf` · 32 páginas · 16:9 (1440 × 810 pt).
 Original preservado, sem alteração: `BILIO_Manual_Marca_16x9.pdf`, SHA-256 `3e88af55375501ab746295c407face1b7d816f673b18731e37cdcf21dab1b5cd`.
 
 ## 1. Método
@@ -112,7 +112,7 @@ Não houve terceira auditoria. A nota 7,0 refere-se à versão anterior a estas 
 6. A relação C1 e altura do símbolo na versão reduzida horizontal (p. 19) **não foi medida** e a página agora diz isso.
 7. Os rodapés das páginas originais continuam com o contraste do original (cerca de 4,1:1). Só as páginas refeitas têm o rodapé mais escuro.
 9. A capa e a p. 25 perderam o fundo em imagem (degradê e reflexo). A capa ficou chapada, sem o símbolo-fantasma; se o escritório quiser o fantasma de volta, ele precisa ser refeito em vetor chapado.
-8. Versão 9:16 não foi atualizada.
+8. Versão 9:16 não foi atualizada e está suspensa (ver `05_decisoes_finais.md`).
 
 ## 6. Pendências que dependem do cliente
 
@@ -127,14 +127,14 @@ Não houve terceira auditoria. A nota 7,0 refere-se à versão anterior a estas 
 | 7 | Marca-d'água em petição e parecer: aceitável? | Página 24 |
 | 8 | Validar a leitura do tigre (p. 9) | Página 9 |
 | 9 | Confirmar o lema "A força da convicção. O equilíbrio da justiça." | Todo o manual |
-| 10 | Decidir se o site segue o manual (logotipo, fontes) | Site publicado |
-| 11 | Decidir se a versão 9:16 será mantida e atualizada | Versão 9:16 |
+| 10 | ~~Decidir se o site segue o manual~~ Decidido: o manual é a referência; o site migra quando houver arquivo-mestre (ver `05_decisoes_finais.md`) | Site publicado |
+| 11 | ~~Decidir sobre a versão 9:16~~ Decidido: 16:9 é o formato oficial; a 9:16 fica suspensa (ver `05_decisoes_finais.md`) | Versão 9:16 |
 
 A direção para produzir o que falta está em `04_direcao_fotografica_p22-24_p26_p28.md`.
 
 ## 7. Arquivos
 
-- `BILIO_Manual_Marca_16x9_rev2.pdf`: manual revisado.
+- `BILIO_Manual_Marca_16x9_v1.1.pdf`: manual revisado.
 - `comparacao/`: antes e depois de todas as páginas alteradas, página nova 32, manifesto novo e teste de favicon.
 - `fonte/`: HTML, scripts (`build.py`, `build2.py`, `render.js`, `patch2.py`), retratos, fontes e o símbolo derivado.
 - `ativos_derivados/`: símbolo em SVG (derivado do PDF).
