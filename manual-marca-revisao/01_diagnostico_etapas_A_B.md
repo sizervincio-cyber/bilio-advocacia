@@ -3,7 +3,7 @@
 
 Arquivos analisados: `BILIO_Manual_Marca_16x9.pdf` (30 páginas, 1440 × 810 pt) e `BILIO_Manual_Marca_9x16.pdf` (30 páginas). O texto das duas versões é idêntico, só muda o reflow (única diferença: a quebra de linha "reencontrá-la"). Toda a análise visual foi feita na versão 16:9.
 
-Status: **Etapas A e B concluídas. Etapas C e D (implementação e auditoria final) aguardam sua aprovação e os ativos listados na seção 7.**
+Status: **Etapas A e B concluídas. Etapa C parcial (B1, B2, B9 e correções das p. 12 e 13) entregue: ver `02_relatorio_etapa_C_QA.md`. O restante aguarda aprovação e os ativos da seção 7.**
 
 ---
 

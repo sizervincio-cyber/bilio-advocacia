@@ -1,0 +1,63 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Manual · 09 Cores · contraste</title><style>
+@font-face{font-family:'Montserrat';src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2');font-weight:400;font-style:normal}
+@font-face{font-family:'Montserrat';src:url(fonts/montserrat-latin-500-normal.woff2) format('woff2');font-weight:500;font-style:normal}
+@font-face{font-family:'Montserrat';src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2');font-weight:600;font-style:normal}
+@font-face{font-family:'Inter';src:url(fonts/inter-latin-400-normal.woff2) format('woff2');font-weight:400;font-style:normal}
+@font-face{font-family:'Inter';src:url(fonts/inter-latin-500-normal.woff2) format('woff2');font-weight:500;font-style:normal}
+@font-face{font-family:'Inter';src:url(fonts/inter-latin-600-normal.woff2) format('woff2');font-weight:600;font-style:normal}
+@page{size:1920px 1080px;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden}
+body{font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.page{position:relative;width:1920px;height:1080px;overflow:hidden}
+.dark{background:#151719;color:#F4F0E8}
+.light{background:#F4F0E8;color:#20242A}
+.hdr{z-index:3;position:absolute;left:120px;top:64px;width:1680px;height:18px;display:flex;align-items:center;font-family:Montserrat;font-weight:600;font-size:14.5px;letter-spacing:.18em;text-transform:uppercase;line-height:18px}
+.hdr .n{margin-right:25px}
+.hdr .rule{flex:1;height:1px;margin-left:24px}
+.dark .hdr .n{color:#C4A46F} .dark .hdr .rule{background:rgba(196,164,111,.28)}
+.light .hdr .n{color:#8F021D} .light .hdr .rule{background:rgba(32,36,42,.16)}
+.ftr{z-index:3;position:absolute;left:120px;top:1013px;width:1680px;display:flex;justify-content:space-between;font-family:Montserrat;font-weight:500;font-size:12.8px;letter-spacing:.18em;line-height:15px;text-transform:uppercase}
+.dark .ftr{color:#8A867E} .light .ftr{color:#6A665D}
+h1{font-family:Montserrat;font-weight:500;font-size:67px;line-height:75px;letter-spacing:0}
+.dark h1{color:#F4F0E8} .light h1{color:#20242A}
+p.b{font-family:Inter;font-weight:400;font-size:24px;line-height:37px}
+.dark p.b{color:rgba(244,240,232,.78)} .light p.b{color:#5E5A52}
+.k{font-family:Montserrat;font-weight:600;font-size:14px;letter-spacing:.18em;text-transform:uppercase}
+.abs{position:absolute}
+</style></head>
+<body><div class="page light">
+<div class="hdr"><span class="n">09</span><span>Cores</span><span class="rule"></span></div>
+
+<h1 class="abs" style="left:120px;top:145px">Contraste medido.</h1>
+<p class="abs" style="left:1160px;top:160px;width:640px;font-size:19px;line-height:31px;color:#5E5A52">Razões calculadas pela fórmula WCAG 2. Texto corrente pede 4,5:1 ou mais. Elementos gráficos grandes pedem 3:1. O logotipo é isento.</p>
+<div class="abs" style="left:120px;top:269px;width:405px;height:216px;background:#151719;">
+<div class="abs" style="left:25px;top:23px;font-family:Montserrat;font-weight:600;font-size:11.3px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,240,232,.6)">Recomendado</div>
+<div class="abs" style="left:25px;top:68px;font-family:Montserrat;font-weight:500;font-size:40px;line-height:50px;color:#C4A46F">7,6:1</div>
+<div class="abs" style="left:25px;top:158px;right:25px;font-size:15px;line-height:21px;color:#C4A46F">Dourado sobre preto</div></div><div class="abs" style="left:545px;top:269px;width:405px;height:216px;background:#20242A;">
+<div class="abs" style="left:25px;top:23px;font-family:Montserrat;font-weight:600;font-size:11.3px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,240,232,.6)">Recomendado</div>
+<div class="abs" style="left:25px;top:68px;font-family:Montserrat;font-weight:500;font-size:40px;line-height:50px;color:#C4A46F">6,6:1</div>
+<div class="abs" style="left:25px;top:158px;right:25px;font-size:15px;line-height:21px;color:#C4A46F">Dourado sobre grafite</div></div><div class="abs" style="left:970px;top:269px;width:405px;height:216px;background:#151719;">
+<div class="abs" style="left:25px;top:23px;font-family:Montserrat;font-weight:600;font-size:11.3px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,240,232,.6)">Recomendado</div>
+<div class="abs" style="left:25px;top:68px;font-family:Montserrat;font-weight:500;font-size:40px;line-height:50px;color:#F2E6CF">14,5:1</div>
+<div class="abs" style="left:25px;top:158px;right:25px;font-size:15px;line-height:21px;color:#F2E6CF">Creme sobre preto</div></div><div class="abs" style="left:1395px;top:269px;width:405px;height:216px;background:#F4F0E8;border:1px solid rgba(32,36,42,.16);">
+<div class="abs" style="left:25px;top:23px;font-family:Montserrat;font-weight:600;font-size:11.3px;letter-spacing:.18em;text-transform:uppercase;color:#8F021D">Recomendado</div>
+<div class="abs" style="left:25px;top:68px;font-family:Montserrat;font-weight:500;font-size:40px;line-height:50px;color:#8F021D">8,4:1</div>
+<div class="abs" style="left:25px;top:158px;right:25px;font-size:15px;line-height:21px;color:#8F021D">Bordô sobre marfim</div></div><div class="abs" style="left:120px;top:505px;width:405px;height:216px;background:#F4F0E8;border:1px solid rgba(32,36,42,.16);">
+<div class="abs" style="left:25px;top:23px;font-family:Montserrat;font-weight:600;font-size:11.3px;letter-spacing:.18em;text-transform:uppercase;color:#8F021D">Recomendado</div>
+<div class="abs" style="left:25px;top:68px;font-family:Montserrat;font-weight:500;font-size:40px;line-height:50px;color:#20242A">13,7:1</div>
+<div class="abs" style="left:25px;top:158px;right:25px;font-size:15px;line-height:21px;color:#20242A">Grafite sobre marfim</div></div><div class="abs" style="left:545px;top:505px;width:405px;height:216px;background:#8F021D;">
+<div class="abs" style="left:25px;top:23px;font-family:Montserrat;font-weight:600;font-size:11.3px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,240,232,.72)">Recomendado</div>
+<div class="abs" style="left:25px;top:68px;font-family:Montserrat;font-weight:500;font-size:40px;line-height:50px;color:#F2E6CF">7,7:1</div>
+<div class="abs" style="left:25px;top:158px;right:25px;font-size:15px;line-height:21px;color:#F2E6CF">Creme sobre bordô</div></div><div class="abs" style="left:970px;top:505px;width:405px;height:216px;background:#F4F0E8;border:1px solid rgba(32,36,42,.16);">
+<div class="abs" style="left:25px;top:23px;font-family:Montserrat;font-weight:600;font-size:11.3px;letter-spacing:.18em;text-transform:uppercase;color:#8F021D">Abaixo de 3:1</div>
+<div class="abs" style="left:25px;top:68px;font-family:Montserrat;font-weight:500;font-size:40px;line-height:50px;color:#C4A46F">2,1:1</div>
+<div class="abs" style="left:25px;top:158px;right:25px;font-size:15px;line-height:21px;color:#5E5A52">Dourado sobre marfim. Nunca em texto. Só o logotipo é isento.</div></div><div class="abs" style="left:1395px;top:505px;width:405px;height:216px;background:#151719;">
+<div class="abs" style="left:25px;top:23px;font-family:Montserrat;font-weight:600;font-size:11.3px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,240,232,.6)">Não usar</div>
+<div class="abs" style="left:25px;top:68px;font-family:Montserrat;font-weight:500;font-size:40px;line-height:50px;color:#8F021D">1,9:1</div>
+<div class="abs" style="left:25px;top:158px;right:25px;font-size:15px;line-height:21px;color:#F2E6CF">Bordô sobre preto. Na negativa, o acento é o creme.</div></div>
+<div class="abs" style="left:120px;top:818px;width:1680px;height:1px;background:rgba(32,36,42,.16)"></div>
+<div class="abs" style="left:120px;top:840px;width:520px"><div style="font-family:Montserrat;font-weight:600;font-size:20px;letter-spacing:.14em;text-transform:uppercase;color:#8F021D;height:39px">Bordô provisório</div><div style="font-size:18px;line-height:28px;color:#5E5A52">O valor #8F021D foi medido na imagem original da marca. Deve ser confirmado em prova antes de virar padrão definitivo. A origem dos demais HEX será documentada.</div></div><div class="abs" style="left:699px;top:840px;width:520px"><div style="font-family:Montserrat;font-weight:600;font-size:20px;letter-spacing:.14em;text-transform:uppercase;color:#8F021D;height:39px">CMYK de referência</div><div style="font-size:18px;line-height:28px;color:#5E5A52">Todos os valores CMYK, inclusive o do creme, foram calculados a partir do RGB e servem de ponto de partida. Toda impressão exige prova de gráfica.</div></div><div class="abs" style="left:1277px;top:840px;width:520px"><div style="font-family:Montserrat;font-weight:600;font-size:20px;letter-spacing:.14em;text-transform:uppercase;color:#8F021D;height:39px">Dourado físico</div><div style="font-size:18px;line-height:28px;color:#5E5A52">Em papel, o dourado pede tinta especial ou hot stamping fosco, com especificação acertada com a gráfica.</div></div>
+
+<div class="ftr"><span>BÍLIO &amp; BÍLIO · MANUAL DE IDENTIDADE VISUAL</span><span>13</span></div>
+</div></body></html>
