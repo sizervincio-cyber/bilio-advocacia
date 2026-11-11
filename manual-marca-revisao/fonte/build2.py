@@ -39,12 +39,14 @@ for k, (num, name, pg) in enumerate([("21","Quem assina","31"),("22","Produção
 out["ov_p02"] = ov(items, "p02")
 
 # ---------------------------------------------------------------- p. 4: coluna I sem hífen final
-items = [T(120, 860, "Preservar os dois B e o nome por extenso.", 20, MARFIM, h=24),
-         T(120, 891, "Quem conhecia a marca precisa reencontrá-la.", 20, MARFIM, h=24)]
+C4 = "rgba(244,240,232,.76)"
+items = [T(120, 860, "Preservar os dois B e o nome por extenso.", 20, C4, h=24),
+         T(120, 891, "Quem conhecia a marca precisa reencontrá-la.", 20, C4, h=24)]
 out["ov_p04"] = ov(items, "p04")
 
 # ---------------------------------------------------------------- p. 8: rótulo e nota didática
-items = ['<div class="t m" style="left:1478px;top:703px;width:350px;text-align:center;font-size:14px;letter-spacing:.18em;line-height:18px;color:#8F021D;text-transform:uppercase">B contraposto</div>',
+items = ['<div class="t m" style="left:842px;top:703px;width:350px;text-align:center;font-size:14px;letter-spacing:.18em;line-height:18px;color:#8F021D;text-transform:uppercase">B esquerdo</div>',
+         '<div class="t m" style="left:1478px;top:703px;width:350px;text-align:center;font-size:14px;letter-spacing:.18em;line-height:18px;color:#8F021D;text-transform:uppercase">B direito</div>',
          T(951, 752, "Destaques didáticos sobre o símbolo oficial. Não são variantes da marca.", 16, "#5E5A52", h=22)]
 out["ov_p08"] = ov(items, "p08")
 
@@ -73,8 +75,8 @@ items = [T(120, 788, "Impresso: 40 mm de largura (proposto).", 17.5, G, h=21),
          T(1077, 788, "Sem descritor.", 17.5, G, h=21),
          T(1077, 815, "Impresso: 25 mm (proposto).", 17.5, G, h=21),
          T(1450, 815, "Impresso: 8 mm de altura (proposto).", 17.5, G, h=21),
-         T(1160, 303, "As larguras incluem a margem mínima dos arquivos oficiais.", 20, G, h=24),
-         T(120, 958, "Os mínimos em pixel valem para tela. Os mínimos impressos, em milímetros, são propostos e independentes dos pixels: confirmar em prova de gráfica.", 16, G, h=20)]
+         T(120, 958, "Os mínimos em pixel valem para tela. Os mínimos impressos, em milímetros, são propostos e independentes dos pixels: confirmar em prova de gráfica.", 16, G, h=20),
+         T(120, 980, "As larguras em pixel incluem a margem mínima dos arquivos oficiais.", 16, G, h=20)]
 out["ov_p20"] = ov(items, "p20")
 
 # ---------------------------------------------------------------- p. 21: erros adicionais
@@ -87,7 +89,10 @@ items = [T(120, 806, "Símbolo à esquerda, nome em Montserrat, dados em Inter."
          T(120, 837, "Em clientes de e-mail sem essas fontes, usar Arial como reserva.", 20, G, h=24),
          T(120, 868, "Fundo branco, sem imagens extras, frases de efeito ou cores", 20, G, h=24),
          T(120, 899, "fora da paleta.", 20, G, h=24),
-         T(1000, 948, "Antes de publicar, testar o favicon em 16 e 32 px reais.", 20, G, h=24)]
+         T(120, 934, "Telefone e e-mail do exemplo seguem o site do escritório e devem ser confirmados.", 20, G, h=24),
+         T(1000, 886, "Mostrados aqui: ícones de 16 a 180 px. O pacote 06_REDUZIDA", 20, G, h=24),
+         T(1000, 917, "traz de 16 a 512 px e o favicon.ico. Em avatares, prefira a", 20, G, h=24),
+         T(1000, 948, "versão negativa. Antes de publicar, teste o favicon em 16 e 32 px.", 20, G, h=24)]
 out["ov_p27"] = ov(items, "p27")
 
 # ---------------------------------------------------------------- p. 1: versão
@@ -103,8 +108,26 @@ out["ov_p25"] = ov([f'<div class="abs" style="left:100px;top:150px;opacity:.07">
 # ---------------------------------------------------------------- p. 28: origem das imagens
 out["ov_p28"] = ov([T(1178, 900, "Imagens ilustrativas, origem a documentar. Substituição prevista.", 15, "rgba(244,240,232,.7)", h=19)], "p28")
 
+# ---------------------------------------------------------------- p. 15: exceção de fonte de reserva
+out["ov_p15"] = ov([T(120, 506, "Exceção: em e-mail, a fonte de sistema (Arial) entra como reserva.", 17, "#5E5A52", h=22)], "p15")
+# ---------------------------------------------------------------- p. 22: regra alinhada ao exemplo da p. 24
+out["ov_p22"] = ov([T(154, 668, "Marca centralizada na pasta e no cartão, com área de", 21, GRAF, extra="font-weight:600", h=25),
+                    T(154, 698, "proteção respeitada. Capa de documento: marca reduzida no topo.", 21, "#5E5A52", h=25)], "p22")
+# ---------------------------------------------------------------- p. 26: texto alinhado ao mockup
+out["ov_p26"] = ov([T(120, 691, "No cabeçalho e, fora do hero, em telas", 24, MARFIM, h=29),
+                    T(120, 729, "estreitas, usa-se a horizontal. Nunca", 24, MARFIM, h=29),
+                    T(120, 767, "abaixo de 240 px de largura.", 24, MARFIM, h=29)], "p26")
+# ---------------------------------------------------------------- rodapés mais escuros nas páginas originais (contraste 4,5:1)
+LIGHT, DARKC = "#5E5A52", "#9A968D"
+FOOT = {n: (LIGHT, LIGHT) for n in [2,3,6,8,15,16,18,20,21,23,27]}
+FOOT.update({n: (DARKC, DARKC) for n in [4,7,14,17,19,24,25,26,30]})
+FOOT[5] = (LIGHT, DARKC)      # meia página clara, meia escura
+FOOT[22] = (LIGHT, "#3F3B34")  # número sobre o painel bege
+for n, (cl, cr) in FOOT.items():
+    out[f"ov_f{n:02d}"] = ov([f'<div class="ftr" style="color:{cl}"><span>BÍLIO &amp; BÍLIO · MANUAL DE IDENTIDADE VISUAL</span><span style="color:{cr}">{n:02d}</span></div>'], f"f{n}")
+
 # ---------------------------------------------------------------- p. 30: fecho ancorado na transição real
-items = ['<div class="t m" style="left:0;top:264px;width:1920px;text-align:center;font-size:16.5px;letter-spacing:.24em;line-height:22px;color:#C4A46F">A FORÇA DA CONVICÇÃO. O EQUILÍBRIO DA JUSTIÇA.</div>',
+items = ['<div class="t m" style="left:0;top:264px;width:1920px;text-align:center;font-size:16.5px;letter-spacing:.24em;line-height:22px;color:#C4A46F">A FORÇA DA CONVICÇÃO. O EQUILÍBRIO DA JUSTIÇ<span style="letter-spacing:0">A</span>.</div>',
          f'<div class="t m" style="left:0;top:374px;width:1920px;text-align:center;font-size:84px;line-height:102px;color:{MARFIM}">O desenho ficou mais preciso.</div>',
          f'<div class="t m" style="left:0;top:469px;width:1920px;text-align:center;font-size:84px;line-height:102px;color:{GOLD}">O nome e as iniciais continuam.</div>']
 out["ov_p30"] = ov(items, "p30")
@@ -136,7 +159,7 @@ th = "".join(f'<th style="text-align:left;font-family:Montserrat;font-weight:600
 def cell(v, first=False):
     pend = v.startswith("a definir")
     style = (f"font-family:Montserrat;font-weight:500;font-size:20px;color:{GRAF}" if first else
-             (f"font-family:Inter;font-size:18px;color:#8A867E;font-style:normal" if pend else f"font-family:Inter;font-size:18px;color:{GRAF}"))
+             (f"font-family:Inter;font-size:18px;color:#6A665D;font-style:normal" if pend else f"font-family:Inter;font-size:18px;color:{GRAF}"))
     return f'<td style="padding:17px 18px 17px 0;border-top:1px solid rgba(32,36,42,.16);vertical-align:top;{style}">{v}</td>'
 trs = "".join("<tr>" + "".join(cell(v, i == 0) for i, v in enumerate(r)) + "</tr>" for r in rows)
 body = f"""

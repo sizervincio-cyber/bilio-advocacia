@@ -11,7 +11,7 @@ Edição cirúrgica sobre o PDF original. Nas páginas corrigidas por texto, o t
 
 | Páginas | Situação | O que mudou |
 |---|---|---|
-| 5, 6, 7, 14, 15, 16, 22, 24, 26 | Original, idênticas (verificado pixel a pixel) | Nada |
+| 6, 7, 14, 16, 24 | Originais | Só o rodapé ficou mais escuro (contraste 4,5:1); conteúdo visualmente idêntico |
 | 1 | Corrigida | Fundo raster com degradê e reflexo removido (cover flat); "VERSÃO 1.1 · 2026" |
 | 2 | Corrigida | Sumário com números de página e dois anexos (21 e 22) |
 | 3 | Corrigida | "Dois B contrapostos" do símbolo antigo passa a "Dois B espelhados, lado a lado" |
@@ -38,7 +38,7 @@ Edição cirúrgica sobre o PDF original. Nas páginas corrigidas por texto, o t
 | Teste | Resultado |
 |---|---|
 | Páginas e formato | 32 páginas, todas 1440 × 810 pt |
-| Páginas só do original | 9 de 9 idênticas ao original |
+| Páginas só do original | Nenhuma é idêntica byte a byte: todas as páginas editadas foram reescritas pela remoção do texto antigo. Conferi 6, 7, 14, 16 e 24 em recorte ampliado: iguais ao original, exceto o rodapé |
 | Texto antigo removido | Busca de trechos antigos nas páginas editadas: nenhum restante |
 | Fontes | Todas embutidas, CID TrueType, nenhuma Type 3, nenhuma fonte serifada de reserva |
 | Seleção de texto | Funciona nas páginas novas e nas editadas |
@@ -76,6 +76,31 @@ Um revisor sem acesso à minha análise examinou o PDF (versão anterior a estas
 | Grid e ritmo vertical entre páginas vizinhas | Baixa | **Mantido** |
 
 Depois destas correções não houve nova rodada de auditoria independente. A nota 7/10 refere-se à versão anterior.
+
+## 4b. Rodada 3 (segunda auditoria independente)
+
+Um segundo revisor, sem acesso ao primeiro relatório, deu **7,0/10** à versão anterior. Corrigi o que podia ser corrigido no PDF:
+
+| Página | Correção |
+|---|---|
+| 4 | Coluna I com a mesma opacidade das colunas II e III |
+| 8 | Rótulos neutros "B esquerdo", "Eixo comum", "B direito" (acaba o conflito "espelhado/contraposto") |
+| 12 | Rótulos dos swatches com contraste maior; nota do CMYK mais escura |
+| 13 | Regra: "o logotipo e os filetes decorativos são isentos" (cobre a linha bordô das peças escuras) |
+| 15 | Exceção declarada: em e-mail, Arial como reserva |
+| 20 | Margem das larguras passa para a nota inferior (sem apertar os cartões) |
+| 22 | Regra alinhada ao exemplo da p. 24: marca centralizada na pasta e no cartão; capa de documento com marca reduzida no topo |
+| 26 | Texto alinhado ao mockup: a horizontal vale no cabeçalho e, fora do hero, em telas estreitas |
+| 27 | Texto dos ícones corrigido (amostra de 16 a 180 px; pacote de 16 a 512 px); aviso de origem dos dados do e-mail |
+| 30 | Ponto final do lema colado à última letra |
+| 32 | "a definir" com contraste 5:1 |
+| 9, 10 | Legendas mais escuras |
+| Rodapés | 22 páginas originais com rodapé mais escuro (4,5:1 ou mais) |
+| Documento | 22 marcadores de navegação, 22 links no sumário, metadado "Versão 1.1 · 2026" |
+
+Não corrigidos (dependem do cliente ou de arquivo-fonte): fotografias sem origem (p. 21, 26, 28, 31), logo antigo em baixa resolução (p. 3, 5), mockups raster de 105 ppi (p. 22, 28), marca-d'água sobre texto (p. 24), proporção do cartão no mockup (p. 23), enquadramento dos retratos (p. 31), círculo bordô da seta (p. 5), fundos fora da paleta (p. 22, 25, 26, 28), texto espaçado por letras que o Chrome gravou com espaços (limite do PDF original), PDF em RGB sem sangria (é de apresentação, não de gráfica).
+
+Não houve terceira auditoria. A nota 7,0 refere-se à versão anterior a estas correções; as pendências restantes são as da seção 6.
 
 ## 5. Avisos
 

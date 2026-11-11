@@ -94,7 +94,7 @@ body = f"""
 <p class="b abs" style="left:120px;top:612px;width:690px">O animal não faz parte do símbolo e não aparece dentro dele. A página seguinte fixa as regras de uso.</p>
 <div class="abs" style="left:120px;top:800px;width:690px;border-top:1px solid rgba(244,240,232,.16);padding-top:18px">
   <span class="k" style="color:{GOLD}">Leitura a validar</span>
-  <p class="abs" style="left:0;top:48px;width:690px;font-size:15px;line-height:23px;color:rgba(244,240,232,.62)">Correspondência proposta entre as formas do símbolo e a leitura simbólica. O desenho oficial não é alterado: as marcações são sobrepostas apenas para leitura.</p>
+  <p class="abs" style="left:0;top:48px;width:690px;font-size:15px;line-height:23px;color:rgba(244,240,232,.78)">Correspondência proposta entre as formas do símbolo e a leitura simbólica. O desenho oficial não é alterado: as marcações são sobrepostas apenas para leitura.</p>
 </div>
 {diagram}
 """
@@ -115,7 +115,7 @@ body = f"""
 <p class="b abs" style="left:120px;top:400px;width:690px">O animal pode aparecer na comunicação do escritório como imagem de apoio. Nunca como parte da marca.</p>
 <div class="abs" style="left:120px;top:640px;display:flex;align-items:flex-end;gap:34px">
   {symbol(CREME, GOLD, height=250)}
-  <p style="font-family:Inter;font-size:15px;line-height:23px;color:rgba(244,240,232,.62);width:330px;padding-bottom:4px">Versão negativa oficial, em cores chapadas. As áreas vazadas ficam sempre em fundo sólido.</p>
+  <p style="font-family:Inter;font-size:15px;line-height:23px;color:rgba(244,240,232,.78);width:330px;padding-bottom:4px">Versão negativa oficial, em cores chapadas. As áreas vazadas ficam sempre em fundo sólido.</p>
 </div>
 <div class="abs" style="left:1060px;top:196px;width:740px">{rows}<div style="border-top:1px solid rgba(244,240,232,.16)"></div></div>
 """
@@ -149,7 +149,7 @@ cells = ""
 for x,w,bg,kick,name,hexv,rgb,cmyk,notes,tone in cols:
     fg = GRAF if tone=="d" else MARFIM
     line = "rgba(32,36,42,.28)" if tone=="d" else "rgba(244,240,232,.28)"
-    dim = "rgba(32,36,42,.66)" if tone=="d" else "rgba(244,240,232,.66)"
+    dim = "rgba(32,36,42,.88)" if tone=="d" else "rgba(244,240,232,.88)"
     notes_html = "".join(f'<div style="font-size:15.5px;line-height:22px;color:{fg}">{n}</div>' for n in notes)
     rowdefs = (("HEX",hexv),("RGB",rgb),("CMYK*",cmyk))
     rws = "".join(f'<div style="display:flex;align-items:center;height:40px;border-top:1px solid {line}"><span style="font-family:Montserrat;font-weight:600;font-size:11px;letter-spacing:.18em;color:{dim};width:66px">{a}</span><span style="font-family:Inter;font-size:16.5px;color:{fg}">{b}</span></div>' for a,b in rowdefs)
@@ -161,7 +161,7 @@ for x,w,bg,kick,name,hexv,rgb,cmyk,notes,tone in cols:
 <div style="margin-top:20px">{notes_html}</div></div></div>"""
 p12 = f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Manual · 09 Cores</title><style>{CSS}</style></head>
 <body><div class="page light" style="background:{MARFIM}">{cells}
-<div class="abs" style="left:44px;top:965px;width:340px;font-size:14px;line-height:20px;color:rgba(32,36,42,.78)">* CMYK de referência, calculado a partir do RGB. Confirmar em prova de gráfica.</div>
+<div class="abs" style="left:44px;top:965px;width:340px;font-size:14px;line-height:20px;color:rgba(32,36,42,.92)">* CMYK de referência, calculado a partir do RGB. Confirmar em prova de gráfica.</div>
 <div class="hdr" style="z-index:2"><span class="n" style="color:{GRAF}">09</span><span style="color:{GRAF}">Cores</span><span class="rule" style="background:rgba(32,36,42,.22)"></span></div>
 <div class="ftr" style="z-index:2;justify-content:flex-end"><span style="color:#6A665D">12</span></div>
 </div></body></html>"""
@@ -196,7 +196,7 @@ bx = [120,699,1277]
 bl = "".join(f'<div class="abs" style="left:{bx[i]}px;top:840px;width:520px"><div style="font-family:Montserrat;font-weight:600;font-size:20px;letter-spacing:.14em;text-transform:uppercase;color:{BORDO};height:39px">{t}</div><div style="font-size:18px;line-height:28px;color:#5E5A52">{d}</div></div>' for i,(t,d) in enumerate(blocks))
 body = f"""
 <h1 class="abs" style="left:120px;top:145px">Contraste medido.</h1>
-<p class="abs" style="left:1160px;top:160px;width:640px;font-size:19px;line-height:31px;color:#5E5A52">Razões calculadas pela fórmula WCAG 2. Texto corrente pede 4,5:1 ou mais. Elementos gráficos grandes pedem 3:1. O logotipo é isento.</p>
+<p class="abs" style="left:1160px;top:160px;width:640px;font-size:19px;line-height:31px;color:#5E5A52">Razões calculadas pela fórmula WCAG 2. Texto corrente pede 4,5:1 ou mais. Elementos gráficos grandes pedem 3:1. O logotipo e os filetes decorativos são isentos.</p>
 {ch}
 <div class="abs" style="left:120px;top:818px;width:1680px;height:1px;background:rgba(32,36,42,.16)"></div>
 {bl}
